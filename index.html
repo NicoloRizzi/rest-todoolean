@@ -32,9 +32,9 @@
     </div>
     <!--HANDLEBARS TEMPLATE ITEM TODO-->
     <script id="todoitem" type="text/x-handlebars-template">
-        <li class="todo" data-id = "{{ id }}">
+        <li class="todo" data-id="{{ id }}">
             {{ todo }}
-            <i class="fas fa-trash remove"></i>
+            <i class="fas fa-trash remove" data-id="{{ id }}"></i>
         </li>
     </script>
 </body>

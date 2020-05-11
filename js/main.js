@@ -23,13 +23,30 @@ $(document).ready(function () {
                 text: todoValue
             },
             success: function() {
-                printTodos(apiUrl, template, listTodo)
+                printTodos(apiUrl, template, listTodo);
+
             },
             error: function (){
-                console.error('Errore nella creazione del nuovo Todo')
+                console.error('Errore nella creazione del nuovo Todo');
             }
         })
     });
+
+    // REMOVE TODO ITEM
+    $(document).on('click','.remove', function(){
+        var todoId = $(this).data('id');
+        $.ajax({
+            type:"DELETE",
+            url: apiUrl + todoId,
+            success: function(){
+                printTodos(apiUrl, template, listTodo);
+            },
+            error: function () {
+                console.error('Errore durante la cancellazione del todo');
+            }
+
+        })
+    })
 
 }); //------ END DOC READY
 
