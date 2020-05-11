@@ -8,9 +8,28 @@ $(document).ready(function () {
     var btnSubmitTodo = $('submit-new-todo');
     var listTodo = $('.todolist');
     var apiUrl = 'http://157.230.17.132:3017/todos/';
+    var newTodoBtn = $('.submit-new-todo');
 
     // GET TODOS
     printTodos(apiUrl, template, listTodo)
+
+    // create a new todo Item
+    newTodoBtn.click(function(){
+        var todoValue = newInputTodo.val().trim();
+        $.ajax({
+            type:"POST",
+            url: apiUrl,
+            data: {
+                text: todoValue
+            },
+            success: function() {
+                printTodos(apiUrl, template, listTodo)
+            },
+            error: function (){
+                console.error('Errore nella creazione del nuovo Todo')
+            }
+        })
+    });
 
 }); //------ END DOC READY
 
