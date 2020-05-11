@@ -30,12 +30,12 @@
             </ul>
         </main>
     </div>
+    <!--HANDLEBARS TEMPLATE ITEM TODO-->
     <script id="todoitem" type="text/x-handlebars-template">
-        <li class="todo">
-            {{ todo-text }}
-            <i class="fas fa-trash remove" data-id = "{{ id }}"></i>
+        <li class="todo" data-id = "{{ id }}">
+            {{ todo }}
+            <i class="fas fa-trash remove"></i>
         </li>
     </script>
-
 </body>
 </html>
