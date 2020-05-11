@@ -20,18 +20,6 @@ $(document).ready(function () {
     // REMOVE TODO ITEM
     $(document).on('click','.remove', function(){
         deleteTodo($(this), apiUrl, template, listTodo)
-    /* var todoId = $(this).data('id');
-        $.ajax({
-            type:"DELETE",
-            url: apiUrl + todoId,
-            success: function(){
-                printTodos(apiUrl, template, listTodo);
-            },
-            error: function () {
-                console.error('Errore durante la cancellazione del todo');
-            }
-
-        })*/
     });
 
 }); //------ END DOC READY
