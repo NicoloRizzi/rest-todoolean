@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    padding: 50px;
+}
+
+.todolist {
+    list-style: none;
+}
+
+.remove {
+    color: red;
+    cursor: pointer;
+}
